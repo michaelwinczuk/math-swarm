@@ -1,0 +1,22 @@
+{
+  "mathematical": {
+    "pi": {"value": "3.14159265358979323846", "sympy": "pi", "description": "ratio of circumference to diameter"},
+    "e": {"value": "2.71828182845904523536", "sympy": "E", "description": "Euler's number"},
+    "phi": {"value": "1.61803398874989484820", "sympy": "(1 + sqrt(5)) / 2", "description": "golden ratio"},
+    "sqrt2": {"value": "1.41421356237309504880", "sympy": "sqrt(2)", "description": "square root of 2"}
+  },
+  "physics": {
+    "speed_of_light": {"value": "299792458", "unit": "m/s", "symbol": "c"},
+    "gravitational_constant": {"value": "6.67430e-11", "unit": "m³/(kg·s²)", "symbol": "G"},
+    "planck_constant": {"value": "6.62607015e-34", "unit": "J·s", "symbol": "h"},
+    "boltzmann_constant": {"value": "1.380649e-23", "unit": "J/K", "symbol": "k_B"},
+    "avogadro_number": {"value": "6.02214076e23", "unit": "mol⁻¹", "symbol": "N_A"},
+    "gravity_earth": {"value": "9.80665", "unit": "m/s²", "symbol": "g"}
+  },
+  "financial": {
+    "trading_days_per_year": {"value": "252"},
+    "months_per_year": {"value": "12"},
+    "weeks_per_year": {"value": "52"},
+    "basis_point": {"value": "0.0001", "description": "1/100 of 1%"}
+  }
+}

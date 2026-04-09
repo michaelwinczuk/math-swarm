@@ -1,0 +1,5 @@
+__pycache__/
+*.json
+!kg/*.json
+pending_missions/
+INTERVIEW_PREP.md

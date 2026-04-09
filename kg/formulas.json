@@ -1,0 +1,91 @@
+{
+  "algebra": [
+    {"name": "quadratic_formula", "formula": "x = (-b ± sqrt(b² - 4ac)) / 2a", "sympy": "(-b + sqrt(b**2 - 4*a*c)) / (2*a)", "variables": {"a": "coefficient of x²", "b": "coefficient of x", "c": "constant"}, "precondition": "b**2 - 4*a*c >= 0 for real roots", "category": "equation_solving"},
+    {"name": "linear_equation", "formula": "y = mx + b", "sympy": "m*x + b", "variables": {"m": "slope", "b": "y-intercept", "x": "independent variable"}, "category": "equation_solving"},
+    {"name": "distance_formula", "formula": "d = sqrt((x2-x1)² + (y2-y1)²)", "sympy": "sqrt((x2-x1)**2 + (y2-y1)**2)", "variables": {"x1": "point 1 x", "y1": "point 1 y", "x2": "point 2 x", "y2": "point 2 y"}, "category": "geometry"},
+    {"name": "percentage", "formula": "result = base × (percent/100)", "sympy": "base * percent / 100", "variables": {"base": "original value", "percent": "percentage"}, "category": "arithmetic"},
+    {"name": "percentage_change", "formula": "change = ((new - old) / old) × 100", "sympy": "((new_val - old_val) / old_val) * 100", "variables": {"new_val": "new value", "old_val": "original value"}, "category": "arithmetic"},
+    {"name": "compound_growth", "formula": "A = P(1 + r)^t", "sympy": "P * (1 + r)**t", "variables": {"P": "principal", "r": "rate per period", "t": "number of periods"}, "category": "growth"}
+  ],
+  "finance": [
+    {"name": "compound_interest", "formula": "A = P(1 + r/n)^(nt)", "sympy": "P * (1 + r/n)**(n*t)", "variables": {"P": "principal", "r": "annual rate (decimal)", "n": "compounds per year", "t": "years"}, "category": "interest"},
+    {"name": "simple_interest", "formula": "I = P × r × t", "sympy": "P * r * t", "variables": {"P": "principal", "r": "annual rate (decimal)", "t": "years"}, "category": "interest"},
+    {"name": "mortgage_payment", "formula": "M = P[r(1+r)^n]/[(1+r)^n - 1]", "sympy": "P * (r * (1+r)**n) / ((1+r)**n - 1)", "variables": {"P": "loan amount", "r": "monthly rate (annual/12)", "n": "total months"}, "category": "loan"},
+    {"name": "present_value", "formula": "PV = FV / (1+r)^t", "sympy": "FV / (1+r)**t", "variables": {"FV": "future value", "r": "discount rate", "t": "periods"}, "category": "valuation"},
+    {"name": "roi", "formula": "ROI = (gain - cost) / cost × 100", "sympy": "((gain - cost) / cost) * 100", "variables": {"gain": "total return", "cost": "total investment"}, "category": "performance"},
+    {"name": "break_even", "formula": "BEP = fixed_costs / (price - variable_cost)", "sympy": "fixed_costs / (price - variable_cost)", "variables": {"fixed_costs": "total fixed costs", "price": "unit selling price", "variable_cost": "unit variable cost"}, "category": "business"},
+    {"name": "sharpe_ratio", "formula": "S = (Rp - Rf) / σp", "sympy": "(Rp - Rf) / sigma_p", "variables": {"Rp": "portfolio return", "Rf": "risk-free rate", "sigma_p": "portfolio std dev"}, "category": "risk"},
+    {"name": "apr_to_apy", "formula": "APY = (1 + APR/n)^n - 1", "sympy": "(1 + apr/n)**n - 1", "variables": {"apr": "annual percentage rate", "n": "compounding periods"}, "category": "interest"}
+  ],
+  "statistics": [
+    {"name": "mean", "formula": "μ = Σx / n", "sympy": "sum(x) / len(x)", "variables": {"x": "data values", "n": "count"}, "category": "descriptive"},
+    {"name": "standard_deviation", "formula": "σ = sqrt(Σ(x-μ)² / n)", "sympy": "sqrt(sum((xi - mean)**2 for xi in x) / len(x))", "variables": {"x": "data values", "mean": "arithmetic mean"}, "category": "descriptive"},
+    {"name": "z_score", "formula": "z = (x - μ) / σ", "sympy": "(x - mu) / sigma", "variables": {"x": "value", "mu": "mean", "sigma": "std dev"}, "category": "normalization"},
+    {"name": "bayes_theorem", "formula": "P(A|B) = P(B|A)P(A) / P(B)", "sympy": "p_b_given_a * p_a / p_b", "variables": {"p_b_given_a": "P(B|A)", "p_a": "P(A)", "p_b": "P(B)"}, "category": "probability"},
+    {"name": "expected_value", "formula": "E[X] = Σ(x × P(x))", "sympy": "sum(x * p for x, p in zip(values, probs))", "variables": {"values": "outcomes", "probs": "probabilities"}, "category": "probability"}
+  ],
+  "physics": [
+    {"name": "velocity", "formula": "v = d / t", "sympy": "d / t", "variables": {"d": "distance", "t": "time"}, "category": "kinematics"},
+    {"name": "kinetic_energy", "formula": "KE = ½mv²", "sympy": "Rational(1,2) * m * v**2", "variables": {"m": "mass (kg)", "v": "velocity (m/s)"}, "category": "energy"},
+    {"name": "force", "formula": "F = ma", "sympy": "m * a", "variables": {"m": "mass (kg)", "a": "acceleration (m/s²)"}, "category": "mechanics"},
+    {"name": "ohms_law", "formula": "V = IR", "sympy": "I * R", "variables": {"I": "current (amps)", "R": "resistance (ohms)"}, "category": "electrical"},
+    {"name": "power", "formula": "P = W / t", "sympy": "W / t", "variables": {"W": "work (joules)", "t": "time (seconds)"}, "category": "energy"}
+  ],
+  "geometry": [
+    {"name": "circle_area", "formula": "A = πr²", "sympy": "pi * r**2", "variables": {"r": "radius"}, "category": "area"},
+    {"name": "sphere_volume", "formula": "V = (4/3)πr³", "sympy": "Rational(4,3) * pi * r**3", "variables": {"r": "radius"}, "category": "volume"},
+    {"name": "pythagorean", "formula": "c² = a² + b²", "sympy": "sqrt(a**2 + b**2)", "variables": {"a": "side a", "b": "side b"}, "category": "triangle"},
+    {"name": "triangle_area", "formula": "A = ½bh", "sympy": "Rational(1,2) * b * h", "variables": {"b": "base", "h": "height"}, "category": "area"},
+    {"name": "cylinder_volume", "formula": "V = πr²h", "sympy": "pi * r**2 * h", "variables": {"r": "radius", "h": "height"}, "category": "volume"}
+  ],
+  "conversion": [
+    {"name": "celsius_to_fahrenheit", "formula": "F = C × 9/5 + 32", "sympy": "c * Rational(9,5) + 32", "variables": {"c": "celsius"}, "category": "temperature"},
+    {"name": "km_to_miles", "formula": "miles = km × 0.621371", "sympy": "km * 0.621371", "variables": {"km": "kilometers"}, "category": "distance"},
+    {"name": "kg_to_lbs", "formula": "lbs = kg × 2.20462", "sympy": "kg * 2.20462", "variables": {"kg": "kilograms"}, "category": "weight"},
+    {"name": "bytes_to_gb", "formula": "GB = bytes / 1073741824", "sympy": "b / 1073741824", "variables": {"b": "bytes"}, "category": "data"}
+  ],
+  "trigonometry": [
+    {"name": "sin_degrees", "formula": "sin(x°)", "sympy": "sin(x * pi / 180)", "variables": {"x": "angle in degrees"}, "category": "trig"},
+    {"name": "cos_degrees", "formula": "cos(x°)", "sympy": "cos(x * pi / 180)", "variables": {"x": "angle in degrees"}, "category": "trig"},
+    {"name": "tan_degrees", "formula": "tan(x°)", "sympy": "tan(x * pi / 180)", "variables": {"x": "angle in degrees"}, "category": "trig"},
+    {"name": "sin_radians", "formula": "sin(x) radians", "sympy": "sin(x)", "variables": {"x": "angle in radians"}, "category": "trig"},
+    {"name": "cos_radians", "formula": "cos(x) radians", "sympy": "cos(x)", "variables": {"x": "angle in radians"}, "category": "trig"},
+    {"name": "tan_radians", "formula": "tan(x) radians", "sympy": "tan(x)", "variables": {"x": "angle in radians"}, "category": "trig"},
+    {"name": "arcsin_degrees", "formula": "arcsin(x) → degrees", "sympy": "asin(x) * 180 / pi", "variables": {"x": "value (-1 to 1)"}, "category": "trig"},
+    {"name": "arccos_degrees", "formula": "arccos(x) → degrees", "sympy": "acos(x) * 180 / pi", "variables": {"x": "value (-1 to 1)"}, "category": "trig"},
+    {"name": "arctan_degrees", "formula": "arctan(x) → degrees", "sympy": "atan(x) * 180 / pi", "variables": {"x": "value"}, "category": "trig"},
+    {"name": "degrees_to_radians", "formula": "radians = degrees × π/180", "sympy": "x * pi / 180", "variables": {"x": "degrees"}, "category": "conversion"},
+    {"name": "radians_to_degrees", "formula": "degrees = radians × 180/π", "sympy": "x * 180 / pi", "variables": {"x": "radians"}, "category": "conversion"}
+  ],
+  "combinatorics": [
+    {"name": "factorial", "formula": "n!", "sympy": "factorial(n)", "variables": {"n": "non-negative integer"}, "category": "counting"},
+    {"name": "permutation", "formula": "P(n,r) = n!/(n-r)!", "sympy": "factorial(n) / factorial(n - r)", "variables": {"n": "total items", "r": "chosen items"}, "category": "counting"},
+    {"name": "combination", "formula": "C(n,r) = n!/(r!(n-r)!)", "sympy": "binomial(n, r)", "variables": {"n": "total items", "r": "chosen items"}, "category": "counting"}
+  ],
+  "number_theory": [
+    {"name": "gcd", "formula": "GCD(a, b)", "sympy": "gcd(a, b)", "variables": {"a": "first integer", "b": "second integer"}, "category": "divisibility"},
+    {"name": "lcm", "formula": "LCM(a, b)", "sympy": "lcm(a, b)", "variables": {"a": "first integer", "b": "second integer"}, "category": "divisibility"}
+  ],
+  "logarithms": [
+    {"name": "natural_log", "formula": "ln(x)", "sympy": "log(x)", "variables": {"x": "positive number"}, "category": "logarithm"},
+    {"name": "log_base_10", "formula": "log₁₀(x)", "sympy": "log(x, 10)", "variables": {"x": "positive number"}, "category": "logarithm"},
+    {"name": "log_base_n", "formula": "log_b(x)", "sympy": "log(x, b)", "variables": {"x": "positive number", "b": "base"}, "category": "logarithm"}
+  ],
+  "healthcare": [
+    {"name": "bmi", "formula": "BMI = weight(kg) / height(m)²", "sympy": "weight / height**2", "variables": {"weight": "weight in kg", "height": "height in meters"}, "category": "vitals"},
+    {"name": "map", "formula": "MAP = (SBP + 2×DBP) / 3", "sympy": "(SBP + 2*DBP) / 3", "variables": {"SBP": "systolic BP mmHg", "DBP": "diastolic BP mmHg"}, "category": "vitals"},
+    {"name": "corrected_calcium", "formula": "Ca_corr = Ca + 0.8 × (4.0 - albumin)", "sympy": "Ca + Rational(8,10) * (4 - albumin)", "variables": {"Ca": "measured calcium mg/dL", "albumin": "serum albumin g/dL"}, "category": "labs"},
+    {"name": "anion_gap", "formula": "AG = Na - (Cl + HCO3)", "sympy": "Na - (Cl + HCO3)", "variables": {"Na": "sodium mEq/L", "Cl": "chloride mEq/L", "HCO3": "bicarbonate mEq/L"}, "category": "labs"},
+    {"name": "cockcroft_gault_male", "formula": "CrCl = (140-age) × weight / (72 × Cr)", "sympy": "(140 - age) * weight / (72 * Cr)", "variables": {"age": "years", "weight": "weight in kg", "Cr": "serum creatinine mg/dL"}, "category": "renal"},
+    {"name": "cockcroft_gault_female", "formula": "CrCl = (140-age) × weight × 0.85 / (72 × Cr)", "sympy": "(140 - age) * weight * Rational(85,100) / (72 * Cr)", "variables": {"age": "years", "weight": "weight in kg", "Cr": "serum creatinine mg/dL"}, "category": "renal"},
+    {"name": "meld_score", "formula": "MELD = 10 × (0.957×ln(Cr) + 0.378×ln(Bili) + 1.120×ln(INR) + 0.643)", "sympy": "10 * (Rational(957,1000)*log(Cr) + Rational(378,1000)*log(Bili) + Rational(1120,1000)*log(INR) + Rational(643,1000))", "variables": {"Cr": "creatinine mg/dL", "Bili": "bilirubin mg/dL", "INR": "international normalized ratio"}, "category": "hepatic"},
+    {"name": "qtc_bazett", "formula": "QTc = QT / √(RR) where RR = 60/HR", "sympy": "QT / sqrt(Rational(60,1)/HR)", "variables": {"QT": "QT interval ms", "HR": "heart rate bpm"}, "category": "cardiac"},
+    {"name": "pediatric_dose", "formula": "Dose = weight × dose_per_kg", "sympy": "weight * dose_per_kg", "variables": {"weight": "weight in kg", "dose_per_kg": "mg per kg"}, "category": "dosing"},
+    {"name": "iv_drip_rate", "formula": "Rate(mL/hr) = Volume / Time", "sympy": "volume / time", "variables": {"volume": "volume in mL", "time": "time in hours"}, "category": "dosing"},
+    {"name": "ibw_male", "formula": "IBW(kg) = 50 + 2.3 × (height_in - 60)", "sympy": "50 + Rational(23,10) * (height_in - 60)", "variables": {"height_in": "height in inches"}, "category": "dosing"},
+    {"name": "ibw_female", "formula": "IBW(kg) = 45.5 + 2.3 × (height_in - 60)", "sympy": "Rational(455,10) + Rational(23,10) * (height_in - 60)", "variables": {"height_in": "height in inches"}, "category": "dosing"},
+    {"name": "aa_gradient", "formula": "A-a = (FiO2×713 - PaCO2/0.8) - PaO2", "sympy": "(FiO2 * 713 - PaCO2 / Rational(4,5)) - PaO2", "variables": {"FiO2": "fraction inspired O2 (0.21-1.0)", "PaCO2": "arterial CO2 mmHg", "PaO2": "arterial O2 mmHg"}, "category": "pulmonary"},
+    {"name": "egfr_male", "formula": "eGFR = 142 × min(Cr/0.9,1)^-0.302 × max(Cr/0.9,1)^-1.200 × 0.9938^age", "sympy": "142 * Min(Cr/Rational(9,10), 1)**Rational(-302,1000) * Max(Cr/Rational(9,10), 1)**Rational(-1200,1000) * Rational(9938,10000)**age", "variables": {"Cr": "serum creatinine mg/dL", "age": "years"}, "category": "renal"},
+    {"name": "egfr_female", "formula": "eGFR = 142 × min(Cr/0.7,1)^-0.241 × max(Cr/0.7,1)^-1.200 × 0.9938^age × 1.012", "sympy": "142 * Min(Cr/Rational(7,10), 1)**Rational(-241,1000) * Max(Cr/Rational(7,10), 1)**Rational(-1200,1000) * Rational(9938,10000)**age * Rational(1012,1000)", "variables": {"Cr": "serum creatinine mg/dL", "age": "years"}, "category": "renal"}
+  ]
+}
